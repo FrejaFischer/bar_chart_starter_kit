@@ -1,12 +1,13 @@
 const list = document.querySelector("ul");
 const waitArray = [];
 let count = 999;
+let waitingNumber = Math.floor(Math.random() * (5001 - 1000) + 1000) + 1;
 
 const startInterval = setInterval(createBlock, 1000);
 const spaceInterval = setInterval(() => {
   document.querySelector(".space_no").textContent = count;
   count--;
-}, 3000);
+}, waitingNumber);
 
 function createBlock() {
   const li = document.createElement("li");
